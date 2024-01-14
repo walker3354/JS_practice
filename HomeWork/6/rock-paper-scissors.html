@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+    <p>Rock Paper Scissors</p>
+
+    <button
+      onclick="
+        AI_pool = Math.floor(Math.random()*3)+1;
+        if(AI_pool === 2){
+            alert('AI Win');
+        }else if(AI_pool === 1)
+        {
+            alert('tie');
+        }
+        else{
+            alert('User Win!');
+        }
+        console.log('Rock');
+        console.log(AI_pool);
+    "
+    >
+      Rock
+    </button>
+
+    <button
+      onclick="
+        AI_pool = Math.floor(Math.random()*3)+1;
+        if(AI_pool === 3){
+            alert('AI Win');
+        }else if(AI_pool === 2)
+        {
+            alert('tie');
+        }
+        else{
+            alert('User Win!');
+        }
+        console.log('Paper');
+        console.log(AI_pool);
+    "
+    >
+      Paper
+    </button>
+
+    <button
+      onclick="
+        AI_pool = Math.floor(Math.random()*3)+1;
+        if(AI_pool === 1){
+            alert('AI Win');
+        }else if(AI_pool === 2)
+        {
+            alert('tie');
+        }
+        else{
+            alert('User Win!');
+        }
+        console.log('Scissors');
+        console.log(AI_pool);
+    "
+    >
+      Scissors
+    </button>
+
+    <script>
+      let AI_pool;
+    </script>
+  </body>
+</html>
