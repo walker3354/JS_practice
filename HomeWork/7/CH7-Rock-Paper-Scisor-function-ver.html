@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuRock-Paper-Scisor-function-ver</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="
+        console.log(`computer choses ${compare_AI()}`);
+        if(AI_move === 'Rock')
+            alert('tie');
+        else if(AI_move === 'Scissor')
+            alert('usr win');
+        else alert('computer win');
+    ">Rock</button>
+
+    <button onclick="
+        console.log(`computer choses ${compare_AI()}`);
+        if(AI_move === 'Paper')
+            alert('tie');
+        else if(AI_move === 'Rock')
+            alert('usr win');
+        else alert('computer win');
+    ">Paper</button>
+
+    <button onclick="
+        console.log(`computer choses ${compare_AI()}`);
+        if(AI_move === 'Scissor')
+            alert('tie');
+        else if(AI_move === 'Paper')
+            alert('usr win');
+        else alert('computer win');
+    ">Scissor</button>
+
+    <script>
+        let AI_move;
+        function compare_AI() {
+            let AI_pool = Math.random();
+            if (AI_pool >= 0 && AI_pool < 1 / 3)
+                AI_move = 'Rock';
+            else if (AI_pool >= 1 / 3 && AI_pool < 2 / 3)
+                AI_move = 'Paper';
+            else if (AI_pool >= 2 / 3 && AI_pool < 1)
+                AI_move = 'Scissor';
+            return AI_move;
+        }
+    </script>
+</body>
+
+</html>
