@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork-A~F</title>
+</head>
+
+<body>
+    <script>
+        let usr_name;
+
+        function greet(usr_name_p) {
+            if (!usr_name_p)
+                alert(`Hello ${usr_name_p}`);
+            else
+                alert('Hi there');
+        }
+
+        function convert_to_Fahrenheit(Celsius_p) {
+            let Fahrenheit = (Celsius_p * (9 / 5)) + 32;
+            return Fahrenheit;
+        }
+
+        function convert_to_Celsius(Fahrenheit_p) {
+            let Celsius = (Fahrenheit_p - 32) * (5 / 9);
+            return Celsius;
+        }
+
+        function convert_temperature(degree_p, unit) {
+            let degree;
+            if (unit === 'C' || unit === 'c')
+                return `${convert_to_Fahrenheit(degree_p)} F`;
+            else if (unit === 'F' || unit === 'f')
+                return `${convert_to_Celsius(degree_p)} C`;
+        }
+    </script>
+</body>
+
+</html>
