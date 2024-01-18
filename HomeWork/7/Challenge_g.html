@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Challenge_g</title>
+</head>
+
+<body>
+  <p>
+    <button onclick="
+        updateCalcuation('1');
+      ">1</button>
+
+    <button onclick="
+        updateCalcuation('2');
+      ">2</button>
+
+    <button onclick="
+        updateCalcuation('3');
+      ">3</button>
+
+    <button onclick="
+        updateCalcuation('+');
+      ">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalcuation('4');
+      ">4</button>
+
+    <button onclick="
+        updateCalcuation('5');
+      ">5</button>
+
+    <button onclick="
+        updateCalcuation('6');
+      ">6</button>
+
+    <button onclick="
+        updateCalcuation('-');
+      ">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalcuation('7');
+      ">7</button>
+
+    <button onclick="
+        updateCalcuation('8');
+      ">8</button>
+
+    <button onclick="
+        updateCalcuation('9');
+      ">9</button>
+
+    <button onclick="
+        updateCalcuation('*');
+      ">*</button>
+  </p>
+
+  <p>
+    <button onclick="
+        updateCalcuation('0');
+      ">0</button>
+
+    <button onclick="
+       updateCalcuation('.');
+      ">.</button>
+
+    <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+
+    <button onclick="
+        updateCalcuation('/');
+      ">/</button>
+  </p>
+
+  <p>
+    <button onclick="
+        calculation = '';
+        console.log(calculation);
+      ">Clear</button>
+  </p>
+
+  <script>
+    let calculation = '';
+    function updateCalcuation(add_num) {
+      calculation += add_num;
+      console.log(calculation);
+    }
+  </script>
+</body>
+
+</html>

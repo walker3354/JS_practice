@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ch6 Home Work F~J</title>
-  </head>
 
-  <body>
-    <p>Guess the answer</p>
-    <button
-      onclick="usr_ans = 'head'
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch6 Home Work F~J</title>
+</head>
+
+<body>
+  <p>Guess the answer</p>
+  <button onclick="usr_ans = 'head'
       usr_ans===result?alert('You are correct!!'):alert('You are wrong!!');
-    "
-    >
-      head
-    </button>
+    ">
+    head
+  </button>
 
-    <button
-      onclick="usr_ans = 'tail'
+  <button onclick="usr_ans = 'tail'
     usr_ans===result?alert('You are correct!!'):alert('You are wrong!!');
-    "
-    >
-      tail
-    </button>
+    ">
+    tail
+  </button>
 
-    <script>
-      let result = Math.random <= 0.5 ? "head" : "tail";
-      let usr_ans;
+  <script>
+    let result = Math.random <= 0.5 ? "head" : "tail";
+    let usr_ans;
 
-      console.log(result);
-    </script>
-  </body>
+    console.log(result);
+  </script>
+</body>
+
 </html>

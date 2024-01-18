@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart Quantity</title>
+</head>
+
+<body>
+    <p>Cart Quantity</p>
+
+    <button class="Show Quantity" onclick="
+        console.log(`Cart quantity ${CartQuantity}`);
+    ">
+        Show Quantity
+    </button>
+
+    <button class="Add to Cart" onclick="
+        updateCartQunatity(1);
+    ">
+        Add to Cart
+    </button>
+
+    <button class="+2" onclick="
+        updateCartQunatity(2);
+    ">
+        +2
+    </button>
+
+    <button class="+3" onclick="
+        updateCartQunatity(3);
+    ">
+        +3
+    </button>
+
+    <button class="Reset Cart" onclick="
+        CartQuantity = 0;
+        console.log('Cart Reset');
+        console.log(`Cart quantity ${CartQuantity}`);
+    ">
+        Reset Cart
+    </button>
+
+    <button class="+4" onclick="
+        updateCartQunatity(4);
+    ">
+        +4
+    </button>
+
+    <button class="+5" onclick="
+        updateCartQunatity(5);
+    ">
+        +5
+    </button>
+
+    <button class="RemoveFromCart" onclick="
+        updateCartQunatity(-1);
+    ">
+        Remove From Cart
+    </button>
+
+    <button class="-2" onclick="
+        updateCartQunatity(-2);
+    ">
+        -2
+    </button>
+
+    <button class="-3" onclick="
+        updateCartQunatity(-3);
+    ">
+        -3
+    </button>
+
+    <script>
+        let CartQuantity = 0;
+        function updateCartQunatity(product_num) {
+            if (CartQuantity + product_num > 10)
+                console.log(`Cart quantity is Full`);
+            else {
+                CartQuantity += product_num;
+                console.log(`Cart quqntity ${CartQuantity}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
