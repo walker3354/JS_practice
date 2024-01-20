@@ -73,16 +73,12 @@
     <script>
         let CartQuantity = 0;
         function updateCartQunatity(product_num) {
-            if (CartQuantity + product_num > 10)
+            if (CartQuantity + product_num > 10) {
                 console.log(`Cart quantity is Full`);
-            else if (CartQuantity + product_num <= 0) {
-                CartQuantity = 0;
-                console.log('Cart quantity is empty');
+                return;
             }
-            else {
-                CartQuantity += product_num;
-                console.log(`Cart quqntity ${CartQuantity}`);
-            }
+            CartQuantity += product_num;
+            console.log(`Cart quqntity ${CartQuantity}`);
         }
     </script>
 </body>
