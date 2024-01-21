@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge</title>
+</head>
+
+<body>
+    <button onclick="
+        play_game('heads');
+        ">heads</button>
+
+    <button onclick="
+        play_game('tails');
+    ">tails</button>
+
+    <script>
+        let score = {
+            wins: 0,
+            loses: 0
+        }
+
+        if (localStorage.getItem('pre_score') != null) {
+            alert('find pre-score save!');
+            score = JSON.parse(localStorage.getItem('pre_score'));
+        }
+
+        function play_game(guess) {
+            const randomNumber = Math.random();
+            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+            if (guess === result) {
+                console.log('You win!');
+                score.wins += 1;
+            } else {
+                console.log('You lose!');
+                score.loses += 1;
+            }
+            console.log(score);
+            localStorage.setItem('pre_score', JSON.stringify(score));
+        }
+    </script>
+</body>
+
+</html>

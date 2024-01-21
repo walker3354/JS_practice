@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge A-E</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const product = {
+        name: 'basket-ball',
+        price: 2095,
+    }
+
+    const product_2 = {
+        name: 'T-shirt',
+        proce: 2000
+    }
+    console.log(`challenge A ${product}`);
+
+    console.log(`challenge B ${product}`);
+
+    product['delivery-time'] = '3-days';
+    console.log(`challenge C ${product}`);
+
+    function compare_price(product, product_2) {
+        if (product_2.price > product.price)
+            console.log('product_2 is more expensive');
+        else if (product_2.price === product.price)
+            console.log('both price is same');
+        else console.log('product is more expensive');
+    }
+
+    function is_same_product(product, product_2) {
+        return (product.name === product_2.name && product.price === product_2.price);
+    }
+
+</script>
+
+</html>
