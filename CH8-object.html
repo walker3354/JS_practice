@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        /*
+        const product = {
+            name: 'snack',
+            price: 100
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.up_data_time = '1.20';
+        console.log(product);
+
+        delete product.up_data_time;
+        console.log(product);
+        */
+
+        /*
+        const product2 = {
+            name: 'shirt',
+            price: 100,
+            special_time: false,
+            ['special-price']: 80,
+
+            rating: {
+                stars: 4.5,
+                rating_count: 87,
+                ['recent-rating_count']: 30
+            },
+
+            check_special_price: function func1() {
+                return product2.special_time;
+            }
+        }
+
+        console.log(product2);
+        console.log(`product name : ${product2.name}`);
+        console.log(`product normal price ${product2.price}`);
+        console.log(`product special price ${product2['special-' + 'price']}`);
+        console.log(`product recent rating ${product2.rating['recent-' + 'rating_count']}`);
+        console.log(`Dose it have special price ${product2.check_special_price()}`);
+
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+        */
+
+        /*
+        console.log('hello'.length());
+        console, log('walker'.toUpperCase());
+
+        console.log(2.4.tostring());
+        console.log(true.tostring());
+        */
+
+        let test = {
+            price: 100
+        }
+        localStorage.setItem('message', JSON.stringify(test));
+        test = JSON.parse(localStorage.getItem('message'));
+        console.log(test);
+        localStorage.removeItem('message');
+    </script>
+</body>
+
+</html>
