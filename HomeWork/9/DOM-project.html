@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM project</title>
+</head>
+
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="Subscribe-button" onclick="
+        click_Subscribe_button();
+    ">Subscribe</button>
+
+    <script>
+        const usr_save = {
+            Subscribe_status: false
+        }
+
+        const button_element = document.querySelector('.Subscribe-button');
+
+        if (localStorage.getItem('message') != null) {
+            console.log('find previous save');
+            usr_save.Subscribe_status = JSON.parse(localStorage.getItem('message')).Subscribe_status;
+
+            button_element.innerHTML = usr_save.Subscribe_status ? 'Subscribed' : 'Subscribe';
+        }
+
+        function click_Subscribe_button() {
+            if (document.querySelector('.Subscribe-button').innerHTML === 'Subscribe') {
+                usr_save.Subscribe_status = true;
+                button_element.innerHTML = 'Subscribed';
+            } else {
+                usr_save.Subscribe_status = false;
+                button_element.innerHTML = 'Subscribe';
+            }
+        }
+        localStorage.setItem('message', JSON.stringify(usr_save));
+
+    </script>
+</body>
+
+</html>

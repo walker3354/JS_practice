@@ -34,9 +34,10 @@
             } else {
                 console.log('You lose!');
                 score.loses += 1;
+
+                console.log(score);
+                localStorage.setItem('pre_score', JSON.stringify(score));
             }
-            console.log(score);
-            localStorage.setItem('pre_score', JSON.stringify(score));
         }
     </script>
 </body>
