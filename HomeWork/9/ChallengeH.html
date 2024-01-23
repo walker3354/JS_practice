@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork H</title>
+
+</head>
+
+<body>
+    <input class="typing_index" placeholder="Type something" onkeyup="show_usr_input()">
+    <p class="usr_input_result"></p>
+    <script>
+        function show_usr_input() {
+            document.querySelector('.usr_input_result').innerHTML = document.querySelector('.typing_index').value;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork A-B</title>
+</head>
+
+<body>
+    <button class="test_button_1" onclick="
+        click_button('9a');
+        ">9a</button>
+
+    <button class="test_button_2" onclick="
+        click_button('9b');
+    ">9b</button>
+    <p class="chose_result"></p>
+
+    <script>
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('.test_button_2').innerHTML = '9b done!';
+
+        function click_button(button_id) {
+            document.querySelector('.chose_result').innerHTML = `You chose :${button_id}`;
+        }
+    </script>
+</body>
+
+</html>

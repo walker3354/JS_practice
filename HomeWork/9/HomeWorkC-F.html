@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork C-F</title>
+</head>
+
+<body>
+    <button class="heads_button" onclick="click_button('heads')">heads</button>
+    <button class="tails_button" onclick="click_button('tails')">tails</button>
+    <p class="usr_chose_result"></p>
+
+    <input class="usr_input_name" placeholder="please enter your name" onkeydown="check_string_end(event.key)"> <button
+        class="Submit_button" onclick="show_usr_name()">Submit</button>
+    <p class="usr_input_name_result"></p>
+
+    <script>
+
+        function show_usr_name() {
+            document.querySelector('.usr_input_name_result').innerHTML = `Ypur name is: ${document.querySelector('.usr_input_name').value}`;
+        }
+
+        function check_string_end(input_key) {
+            if (input_key === 'Enter')
+                show_usr_name();
+        }
+
+        function click_button(button_id) {
+            document.querySelector('.usr_chose_result').innerHTML = `You chose: ${button_id}`;
+        }
+    </script>
+</body>
+
+</html>
