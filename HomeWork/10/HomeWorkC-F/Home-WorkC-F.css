@@ -1,0 +1,15 @@
+.click-button {
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.clicked-button {
+    background-color: black;
+    color: white;
+}

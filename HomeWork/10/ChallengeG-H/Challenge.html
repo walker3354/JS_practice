@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="Challenge.css">
+</head>
+
+<body>
+    <button class="js-gamming-button click-button" onclick=" click_button('gamming')">
+        Gamming
+    </button>
+    <button class="js-music-button click-button" onclick="click_button('music')">Music</button>
+    <button class="js-tech-button click-button" onclick="click_button('tech')">Tech</button>
+    <p>
+        <input class="input_box js_input_box" placeholder="please enter total price"
+            onkeydown="detect_string_end(event.key)">
+        <button class="calculate_button js_calculate_button" onclick="click_calculate_button()">Calculate</button>
+    </p>
+    <p class="waring_txt"></p>
+
+    <script src="Challenge.js"></script>
+</body>
+
+</html>

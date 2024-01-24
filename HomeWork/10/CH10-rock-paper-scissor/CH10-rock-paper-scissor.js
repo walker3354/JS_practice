@@ -20,11 +20,12 @@ function playGame(playerMove) {
     const computerMove = pickComputerMove();
     let result = '';
 
-    document.querySelector('.js-usr-result').src = `img_storage/${playerMove}-emoji.png`;
-    document.querySelector('.js-computer-result').src = `img_storage/${computerMove}-emoji.png`;
+    document.querySelector('.js-usr-result').src = `../img_storage/${playerMove}-emoji.png`;
+    document.querySelector('.js-computer-result').src = `../img_storage/${computerMove
+    }-emoji.png`;
 
 
-    document.querySelector('.js-usr-result').src = `img_storage/${playerMove}-emoji.png`;
+    document.querySelector('.js-usr-result').src = `../img_storage/${playerMove}-emoji.png`;
     if (playerMove === 'scissors') {
         if (computerMove === 'rock') {
             result = 'You lose.';

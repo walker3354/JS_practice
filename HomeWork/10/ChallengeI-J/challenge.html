@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge</title>
+    <link rel="stylesheet" href="chalenge.css">
+</head>
+
+<body>
+    <!-- Create an element to display the calculation. -->
+    <p class="js-calculation calculation"></p>
+
+    <p>
+        <button onclick="
+        updateCalculation('1');
+      " class="operands">1</button>
+
+        <button onclick="
+        updateCalculation('2');
+      " class="operands">2</button>
+
+        <button onclick="
+        updateCalculation('3');
+      " class="operands">3</button>
+
+        <button onclick="
+        updateCalculation(' + ');
+      " class="operator">+</button>
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculation('4');
+      " class="operands">4</button>
+
+        <button onclick="
+        updateCalculation('5');
+      " class="operands">5</button>
+
+        <button onclick="
+        updateCalculation('6');
+      " class="operands">6</button>
+
+        <button onclick="
+        updateCalculation(' - ');
+      " class="operator">-</button>
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculation('7');
+      " class="operands"> 7</button>
+
+        <button onclick="
+        updateCalculation('8');
+      " class="operands">8</button>
+
+        <button onclick="
+        updateCalculation('9');
+      " class="operands">9</button>
+
+        <button onclick="
+        updateCalculation(' * ');
+      " class="operator">*</button>
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculation('0');
+      " class="operands">0</button>
+
+        <button onclick="
+        updateCalculation('.');
+      " class="operands">.</button>
+
+        <button onclick="
+        calculation = eval(calculation);
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      " class="operands">=</button>
+
+        <button onclick="
+        updateCalculation(' / ');
+      " class="operator">/</button>
+    </p>
+
+    <p>
+        <button onclick="
+        calculation = '';
+        displayCalculation();
+        localStorage.setItem('calculation', calculation);" class="clear-button operands">
+            Clear</button>
+    </p>
+
+    <script src="challenge.js"></script>
+</body>
+
+</html>
