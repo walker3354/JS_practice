@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork A-C</title>
+</head>
+
+<body>
+
+    <script>
+        const nums = [10, 20, 30];
+        nums[nums.length - 1] = 99;
+
+        function getLastValue(array) {
+            return array[array.length - 1];
+        }
+
+        function arraySwap(array) {
+            let temp = array[array.length - 1];
+            array[array.length - 1] = array[0];
+            array[0] = temp;
+            return array;
+        }
+
+        function counts_2() {
+            console.log('counts up by 2');
+            for (let i = 0; i <= 10; i += 2)
+                console.log(i);
+        }
+        function counts_down() {
+            console.log('counts down by 1');
+            for (let i = 5; i >= 0; i--)
+                console.log(i);
+        }
+
+        function while_version() {
+            let i = 0, y = 0;
+            while (i <= 10) {
+                console.log(i);
+                i += 2;
+            }
+            while (y >= 0) {
+                console.log(y);
+                y--;
+            }
+        }
+
+        function increase_array(array) {
+            for (let i = 0; i < array.length; i++)
+                array[i] += 1;
+            return array;
+        }
+
+        function addNum(array, num) {
+            for (let i = 0; i < array.lengthl; i++) {
+                array[i] += num;
+            }
+        }
+        function addArrays(array1, array2) {
+            if (array1.length === array2.length) {
+                const array3 = [];
+                for (let i = 0; i <= array1.length; i++) {
+                    array3.push(array1[i] + array2[i]);
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function countPostive(array) {
+            let postive_num = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 0)
+                    postive_num += 1;
+            }
+            return postive_num;
+        }
+
+
+        console.log(getLastValue(nums));
+        console.log(arraySwap(nums));
+        counts_2();
+        counts_down();
+    </script>
+</body>
+
+</html>

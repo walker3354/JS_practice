@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+
+<body>
+    <script>
+        const fruit_string = ['apple', 'apple', 'orange'];
+
+        const appera_fruit = {
+            fruit: [],
+            fruit_num: []
+        }
+
+        function countWord(array) {
+            for (let i = 0; i < fruit_string.length; i++) {
+                test_previous_fruit(fruit_string[i]);
+            }
+            console.log(appera_fruit);
+        }
+
+        function test_previous_fruit(input_fruit_string) {
+            for (let i = 0; i < appera_fruit.fruit.length; i++) {
+                if (input_fruit_string === appera_fruit.fruit[i]) {
+                    appera_fruit.fruit_num[i] += 1;
+                    return;
+                }
+            }
+            appera_fruit.fruit.push(input_fruit_string);
+            appera_fruit.fruit_num.push(1);
+        }
+
+        countWord(fruit_string);
+    </script>
+</body>
+
+</html>

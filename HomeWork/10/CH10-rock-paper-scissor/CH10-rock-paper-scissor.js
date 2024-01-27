@@ -22,7 +22,7 @@ function playGame(playerMove) {
 
     document.querySelector('.js-usr-result').src = `../img_storage/${playerMove}-emoji.png`;
     document.querySelector('.js-computer-result').src = `../img_storage/${computerMove
-    }-emoji.png`;
+        }-emoji.png`;
 
 
     document.querySelector('.js-usr-result').src = `../img_storage/${playerMove}-emoji.png`;
