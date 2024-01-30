@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11x challenge</title>
+
+    <link rel="stylesheet" href="11x.css">
+</head>
+
+<body>
+    <p class=".todo-title">Todo List</p>
+
+    <div class="input-area">
+        <input class="js-todo-name-input todo-name-input" placeholder="Todo name"
+            onkeydown="detect_string_end(event.key);">
+        <input class="js-Duedata-input Due-data-input" type="date">
+        <button class="js-Add-button Add-button" onclick="add_todo();">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-list"></div>
+
+    <script src="11x.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chllenge</title>
+</head>
+
+<body>
+    <script>
+
+        const test_array = ['red', 'green', 'red', 'green'];
+
+        function FizzBuzz() {
+            for (let i = 1; i <= 20; i++) {
+                let str = '';
+                let flag = false;
+                if (i % 3 === 0) {
+                    str += 'Fizz';
+                    flag = true;
+                }
+                if (i % 5 === 0) {
+                    str += 'Buzz';
+                    flag = true
+                }
+                if (!flag)
+                    str = i;
+                console.log(str);
+            }
+        }
+
+        function findIndex(array, word) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === word) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function unique(array) {
+            let unique_array = [];
+            for (let i = 0; i < array.length; i++) {
+                if (findIndex(unique_array, array[i]) === -1) {
+                    unique_array.push(array[i]);
+                }
+            }
+            return unique_array;
+        }
+
+        console.log(unique(test_array));
+
+    </script>
+</body>
+
+</html>

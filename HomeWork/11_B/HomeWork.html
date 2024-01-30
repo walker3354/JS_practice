@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWorkA-</title>
+</head>
+
+<body>
+
+    <script>
+        function check_string(array, str) {
+            for (let i = 0; i < array.length; i++) {
+                if (str === array[i])
+                    return i;
+            }
+            return -1;
+        }
+
+        function check_string_md(array, str) {
+            let str_pos = -1;
+            for (let i = 0; i < array.length; i++) {
+                if (str === array[i]) {
+                    str_pos = i;
+                    break;
+                }
+            }
+            return str_pos;
+        }
+
+        function removeEgg(foods) {
+            for (let i = 0; i < foods.length; i++) {
+                if (foods[i] === 'egg') {
+                    foods.splice(i, 1);
+                    i--;
+                }
+            }
+            return foods;
+        }
+
+        function removeEgg_md(foods) {
+            let remove_time = 0;
+            for (let i = 0; i < foods.length; i++) {
+                if (remove_time == 2)
+                    break;
+                if (foods[i] === 'egg') {
+                    foods.splice(i, 1);
+                    i--;
+                    remove_time++;
+                }
+            }
+            return foods;
+        }
+
+        function removeEgg_md_2(foods) {
+            const foods_2 = foods.reverse();
+            return removeEgg_md(foods_2).reverse();
+        }
+
+        test_food = ['apple', 'egg', 'orange', 'egg', 'egg']
+        console.log(removeEgg_md_2(test_food));
+    </script>
+</body>
+
+</html>
