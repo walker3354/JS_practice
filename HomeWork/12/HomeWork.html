@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+
+<body>
+    <button class="js-start-button" onclick="click_start_button()">Start</button>
+    <p>
+        <button class="js-add-to-cart-button" onclick="click_add_to_cart_button()">Add to cart</button>
+    </p>
+    <p class="js-show-button"></p>
+
+    <script>
+
+        let fnuc_times = 1;
+        let interval_id;
+        let click_status = false;
+        let time_out_id;
+
+        function test_A() {//12a
+            interval_id = setInterval(function () {
+                if (fnuc_times >= 2)
+                    clearInterval(interval_id);
+                fnuc_times += 1;
+                console.log(2 + 3);
+
+            }, 2000);
+        }
+
+        function rnuTwice(fun) {//12b
+            fun();
+        }
+
+        function click_start_button() {//12c
+            document.querySelector('.js-start-button').innerHTML = 'Loading...';
+            setTimeout(function () {
+                document.querySelector('.js-start-button').innerHTML = 'Finished!';
+            }, 1000);
+        }
+
+        function click_add_to_cart_button() {//12e and 12f
+            document.querySelector('.js-show-button').innerHTML = 'Added';
+            if (click_status === true) {
+                clearTimeout(time_out_id);
+            }
+            click_status = true;
+            time_out_id = setTimeout(function () {
+                document.querySelector('.js-show-button').innerHTML = '';
+                click_status = false;
+            }, 2000);
+        }
+
+    </script>
+</body>
+
+</html>

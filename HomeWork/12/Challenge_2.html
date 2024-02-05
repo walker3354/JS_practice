@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+
+<body>
+    <button onclick="click_add_button()">Add</button>
+    <button onclick="click_remove_button()">Remove</button>
+    <script>
+        let click_count = 0;
+
+        function click_add_button() {
+            click_count++;
+        }
+        function click_remove_button() {
+            if (click_count === 0)
+                return;
+            click_count--;
+        }
+
+        function modify_title() {
+            setInterval(function () {
+                if (document.title === 'App') {
+                    document.querySelector('title').innerHTML = `(${click_count}) New message`;
+                } else {
+                    document.title = 'App';
+                }
+            }, 1000)
+        }
+
+        modify_title();
+    </script>
+</body>
+
+</html>
