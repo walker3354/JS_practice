@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="js-click-button">Click</button>
+    <script>
+        const click_button = document.querySelector('.js-click-button');
+
+        click_button.addEventListener('click', () => {
+            console.log('usr click button 1');
+        })
+
+        const click_button_func = () => {
+            console.log('usr click button 2');
+        };
+
+        click_button.addEventListener('click', click_button_func)
+
+        click_button.removeEventListener('click', click_button_func);
+
+        const test_list = [1, -3, 5];
+        console.log(test_list.filter((value, index) => {
+            if (value > 0)
+                return true;
+            else return false;
+        }));
+
+        console.log(test_list.map((Element) => {
+            Element *= 2;
+            return Element;
+        }))
+        /*
+        const selected_sort = (in_array) => {
+            let max_pos;
+            for (let i = 0; i < in_array.length; i++) {
+                max_pos = i;
+                for (let j = i + 1; j < in_array.length; j++) {
+                    if (in_array[i] < in_array[j])
+                        max_pos = j;
+                }
+                swap(in_array, i, max_pos);
+            }
+        }
+
+        const swap = (in_array, a_pos, b_pos) => {
+            let temp = in_array[a_pos];
+            in_array[a_pos] = in_array[b_pos];
+            in_array[b_pos] = temp;
+        }
+
+        const show_array = (in_array) => {
+            in_array.forEach((element, index) => {
+                console.log(`${index} ${element}`);
+            });
+        }
+
+        const test_array = ['C++', 'C', 'js'];
+
+        const object2 = {
+            method1: show_array,
+            method2: function () {
+                console.log('method2');
+            },
+            method3() {
+                console.log('method3')
+            }
+        }
+
+        object2.method1(test_array);
+        object2.method2();
+        object2.method3();
+        */
+
+
+    </script>
+</body>
+
+</html>
