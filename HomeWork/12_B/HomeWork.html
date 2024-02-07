@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH12 (B)</title>
+
+</head>
+
+<body>
+    <button class="js-start-button" onclick="click_start_button()">Start</button>
+    <p>
+        <button class="js-add-to-cart-button" onclick="click_add_to_cart_button()">Add to cart</button>
+    </p>
+    <p class="js-show-button"></p>
+
+    <script>
+        const test_array = [-1, 2, -3, 5];
+        const test_food = ['apple', 'Egg', 'ham'];
+
+        const multiply = (num, times) => {
+            return num * times;
+        }
+
+        const count_postive = (array) => {
+            let postive_count = 0;
+            array.forEach(element => {
+                if (element > 0) postive_count += 1;
+            });
+            return postive_count;
+        }
+
+        function addNum(array, num) {
+            return array.map(x => x + num);
+        }
+
+        function removeEgg(foods) {
+            return foods.filter(element => element !== 'Egg');
+        }
+
+        /*
+        console.log(removeEgg(test_food));
+        console.log(addNum(test_array, 2));
+        console.log(count_postive(test_array));
+        console.log(multiply(2, 7));
+        */
+
+        //12p-q homework
+        let item_num = 0;
+        let click_status = false;
+        let time_out_id;
+
+        const click_start_button = () => {//12c
+            document.querySelector('.js-start-button').innerHTML = 'Loading...';
+            setTimeout(function () {
+                document.querySelector('.js-start-button').innerHTML = 'Finished!';
+            }, 1000);
+        }
+        const click_add_to_cart_button = () => {//12e and 12f
+            if (document.querySelector('.js-show-button').innerHTML === 'Added')
+                clearTimeout(time_out_id);
+
+            document.querySelector('.js-show-button').innerHTML = 'Added';
+            time_out_id = setTimeout(() => {
+                document.querySelector('.js-show-button').innerHTML = '';
+            }, 1000);
+        }
+
+
+        document.querySelector('.js-show-button').addEventListener('click', click_add_to_cart_button());
+        document.querySelector('.js-start-button').addEventListener('click', click_start_button());
+
+        setInterval(() => {
+            if (document.title === 'CH12(B)') {
+                document.title = `(${item_num}) at Cart`
+            } else document.title = 'CH12(B)';
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
